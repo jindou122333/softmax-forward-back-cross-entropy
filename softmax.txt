@@ -23,7 +23,7 @@ class Softmax:
         self.dnx = np.sum(self.grad * dl, axis=1)
         return self.dnx
 
-    def cross_entropy(a, y):
+    def cross_entropy(self, a, y):
         return np.sum(np.nan_to_num(-y*np.log(a)-(1-y)*np.log(1-a)))
 
 
